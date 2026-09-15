@@ -1,0 +1,187 @@
+{
+  "developers": [
+    {
+      "id": "DEV-001",
+      "name": "Alex Mercer",
+      "email": "alex.mercer@odoo-dev.com",
+      "role": "Senior Odoo Technical Lead",
+      "avatarColor": "#6366f1",
+      "active": true
+    },
+    {
+      "id": "DEV-002",
+      "name": "Sarah Connor",
+      "email": "sarah.connor@odoo-dev.com",
+      "role": "Odoo Module Specialist",
+      "avatarColor": "#ec4899",
+      "active": true
+    },
+    {
+      "id": "DEV-003",
+      "name": "David Chen",
+      "email": "david.chen@odoo-dev.com",
+      "role": "Odoo Integration & Backend Dev",
+      "avatarColor": "#10b981",
+      "active": true
+    }
+  ],
+  "clients": [
+    {
+      "id": "CLI-001",
+      "name": "Acme Logistics Ltd",
+      "company": "Acme Logistics",
+      "email": "contact@acmelogistics.com",
+      "phone": "+1 555-0192",
+      "notes": "Odoo Online 19.0 SaaS tenant with custom delivery workflows.",
+      "createdAt": "2026-09-01T10:00:00.000Z"
+    },
+    {
+      "id": "CLI-002",
+      "name": "Nexus Retail Corp",
+      "company": "Nexus Retail",
+      "email": "odoo-admin@nexusretail.io",
+      "phone": "+1 555-0481",
+      "notes": "Odoo 19 Multi-company setup requiring custom sales commissions.",
+      "createdAt": "2026-09-05T11:30:00.000Z"
+    },
+    {
+      "id": "CLI-003",
+      "name": "Apex Health Systems",
+      "company": "Apex Health",
+      "email": "tech@apexhealth.org",
+      "phone": "+1 555-0922",
+      "notes": "Medical inventory tracking on Odoo 19 SaaS.",
+      "createdAt": "2026-09-10T14:15:00.000Z"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "clientId": "CLI-002",
+      "projectName": "Nexus Sales Boost 2026",
+      "title": "Custom Sales Commission Module",
+      "detailedRequirement": "Client requires a multi-tiered sales commission calculation engine integrated directly into Odoo 19 Sale Orders and Account Invoices. Must support percentage splits per salesperson and tier threshold bonuses.",
+      "requirementDate": "2026-09-06T09:00:00.000Z",
+      "priority": "High",
+      "assignedDeveloperId": "DEV-001",
+      "expectedCompletionDate": "2026-09-25T18:00:00.000Z",
+      "status": "Development",
+      "attachments": [],
+      "createdAt": "2026-09-06T09:00:00.000Z",
+      "updatedAt": "2026-09-06T09:00:00.000Z"
+    },
+    {
+      "id": "REQ-002",
+      "clientId": "CLI-001",
+      "projectName": "Acme Automated Picker",
+      "title": "Barcode Delivery Routing Assistant",
+      "detailedRequirement": "Automated warehouse barcode picker rule for Odoo 19 Stock picking. Requires fast item lookup and batch routing visualization on mobile warehouse screens.",
+      "requirementDate": "2026-09-08T10:30:00.000Z",
+      "priority": "Urgent",
+      "assignedDeveloperId": "DEV-002",
+      "expectedCompletionDate": "2026-09-28T17:00:00.000Z",
+      "status": "Analysis",
+      "attachments": [],
+      "createdAt": "2026-09-08T10:30:00.000Z",
+      "updatedAt": "2026-09-08T10:30:00.000Z"
+    }
+  ],
+  "modules": [
+    {
+      "id": "MOD-001",
+      "linkedRequirementId": "REQ-001",
+      "moduleName": "Sales Commission Manager",
+      "technicalName": "sale_commission_custom",
+      "odooVersion": "19.0",
+      "devStartDate": "2026-09-07T08:00:00.000Z",
+      "developerId": "DEV-001",
+      "status": "In development",
+      "completionDate": "2026-09-22T00:00:00.000Z",
+      "version": "1.0",
+      "attachments": [],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "timestamp": "2026-09-07T08:00:00.000Z",
+          "note": "V1.0 — Initial module creation & structure development"
+        }
+      ],
+      "createdAt": "2026-09-07T08:00:00.000Z",
+      "updatedAt": "2026-09-07T08:00:00.000Z"
+    },
+    {
+      "id": "MOD-002",
+      "linkedRequirementId": "REQ-002",
+      "moduleName": "Warehouse Barcode Picker",
+      "technicalName": "stock_barcode_picker_custom",
+      "odooVersion": "19.0",
+      "devStartDate": "2026-09-09T09:00:00.000Z",
+      "developerId": "DEV-002",
+      "status": "Planning",
+      "completionDate": "2026-09-26T00:00:00.000Z",
+      "version": "1.0",
+      "attachments": [],
+      "versionHistory": [
+        {
+          "version": "1.0",
+          "timestamp": "2026-09-09T09:00:00.000Z",
+          "note": "V1.0 — Initial architecture design and manifest setup"
+        }
+      ],
+      "createdAt": "2026-09-09T09:00:00.000Z",
+      "updatedAt": "2026-09-09T09:00:00.000Z"
+    }
+  ],
+  "customizationRequests": [
+    {
+      "id": "CR-001",
+      "relatedModuleId": "MOD-001",
+      "originalRequirementId": "REQ-001",
+      "clientId": "CLI-002",
+      "requestDate": "2026-09-12T11:00:00.000Z",
+      "description": "Add manager override approval rule for commissions exceeding $5,000 threshold.",
+      "reason": "Business governance policy requested by Nexus finance team after demo review.",
+      "assignedDeveloperId": "DEV-001",
+      "priority": "High",
+      "developmentStatus": "Development",
+      "devStartDate": "2026-09-13T09:00:00.000Z",
+      "devCompletionDate": "2026-09-20T17:00:00.000Z",
+      "testingStatus": "Internal testing",
+      "clientReviewStatus": "Pending",
+      "clientFeedback": "Initial feedback received from CFO. Awaiting revised test build.",
+      "finalApproval": "Pending",
+      "attachments": [],
+      "createdAt": "2026-09-12T11:00:00.000Z",
+      "updatedAt": "2026-09-13T09:00:00.000Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "AUD-001",
+      "timestamp": "2026-09-06T09:00:00.000Z",
+      "action": "CREATE",
+      "entityType": "Requirement",
+      "entityId": "REQ-001",
+      "summary": "Requirement REQ-001 \"Custom Sales Commission Module\" created for Nexus Retail Corp",
+      "changes": []
+    },
+    {
+      "id": "AUD-002",
+      "timestamp": "2026-09-07T08:00:00.000Z",
+      "action": "CREATE",
+      "entityType": "Module",
+      "entityId": "MOD-001",
+      "summary": "Module MOD-001 \"Sales Commission Manager\" created and linked to REQ-001 (Version 1.0)",
+      "changes": []
+    },
+    {
+      "id": "AUD-003",
+      "timestamp": "2026-09-12T11:00:00.000Z",
+      "action": "CREATE",
+      "entityType": "CustomizationRequest",
+      "entityId": "CR-001",
+      "summary": "Customization request CR-001 logged for MOD-001: \"Manager override approval rule\"",
+      "changes": []
+    }
+  ]
+}
